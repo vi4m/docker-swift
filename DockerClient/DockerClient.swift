@@ -18,8 +18,20 @@ class DockerClient {
     
     private init() { }
     
-    func request(url: String, completionBlock: (error: NSErrorPointer, responseArray:[DockerImage]) -> ()) {
-        let url = NSURL(string: url)
+    func getImages(baseUrl: String, port: Int = 80, all: Bool = false, completionBlock: (error: NSErrorPointer, responseArray:[DockerImage]) -> ()) {
+        var urlComponents = NSURLComponents(URL: NSURL(string: baseUrl), resolvingAgainstBaseURL: false)
+        if let scheme = urlComponents.scheme {
+            urlComponents.scheme = "http"
+        }
+        urlComponents.port = port
+        urlComponents.path = "/images/json"
+        if (all) {
+            urlComponents.query = "all=1"
+        } else {
+            urlComponents.query = "all=0"
+        }
+        var url = urlComponents.URL
+        
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url, completionHandler: {(data: NSData!, response: NSURLResponse!, error:NSError!) -> Void in
             if (error) {

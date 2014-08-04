@@ -14,7 +14,7 @@ class ImagesTableViewController: UITableViewController {
     override func viewDidLoad () {
         super.viewDidLoad()
         
-        DockerClient.connection.request(Constants.URL, completionBlock: dataReceived)
+        DockerClient.connection.getImages(Constants.URL, port: 4243, completionBlock: dataReceived)
     }
 
     func dataReceived(err: NSErrorPointer, responseArray: [DockerImage]) -> Void {
