@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		49572F9A1985D09800679771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49572F991985D09800679771 /* AppDelegate.swift */; };
-		49572F9C1985D09800679771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49572F9B1985D09800679771 /* ViewController.swift */; };
 		49572F9F1985D09800679771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49572F9D1985D09800679771 /* Main.storyboard */; };
 		49572FA11985D09800679771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49572FA01985D09800679771 /* Images.xcassets */; };
 		49572FAD1985D09800679771 /* DockerClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49572FAC1985D09800679771 /* DockerClientTests.swift */; };
+		49572FB81985D0DE00679771 /* ImagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49572FB71985D0DE00679771 /* ImagesTableViewController.swift */; };
+		49841BFD1990338C0028D046 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49841BFC1990338C0028D046 /* Constants.swift */; };
+		49D83E5A198F305600C95110 /* DockerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D83E59198F305600C95110 /* DockerClient.swift */; };
+		49D83E5C198F307D00C95110 /* DockerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D83E5B198F307D00C95110 /* DockerImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +31,15 @@
 		49572F941985D09800679771 /* DockerClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DockerClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49572F981985D09800679771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49572F991985D09800679771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49572F9B1985D09800679771 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49572F9E1985D09800679771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49572FA01985D09800679771 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		49572FA61985D09800679771 /* DockerClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockerClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49572FAB1985D09800679771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49572FAC1985D09800679771 /* DockerClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerClientTests.swift; sourceTree = "<group>"; };
+		49572FB71985D0DE00679771 /* ImagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesTableViewController.swift; path = ViewControllers/ImagesTableViewController.swift; sourceTree = "<group>"; };
+		49841BFC1990338C0028D046 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		49D83E59198F305600C95110 /* DockerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockerClient.swift; sourceTree = "<group>"; };
+		49D83E5B198F307D00C95110 /* DockerImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockerImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +81,9 @@
 		49572F961985D09800679771 /* DockerClient */ = {
 			isa = PBXGroup;
 			children = (
+				49572FB91985D0EF00679771 /* Model */,
+				49572FB61985D09F00679771 /* ViewControllers */,
 				49572F991985D09800679771 /* AppDelegate.swift */,
-				49572F9B1985D09800679771 /* ViewController.swift */,
 				49572F9D1985D09800679771 /* Main.storyboard */,
 				49572FA01985D09800679771 /* Images.xcassets */,
 				49572F971985D09800679771 /* Supporting Files */,
@@ -107,6 +114,24 @@
 				49572FAB1985D09800679771 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49572FB61985D09F00679771 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49572FB71985D0DE00679771 /* ImagesTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		49572FB91985D0EF00679771 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49D83E59198F305600C95110 /* DockerClient.swift */,
+				49D83E5B198F307D00C95110 /* DockerImage.swift */,
+				49841BFC1990338C0028D046 /* Constants.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49572F9C1985D09800679771 /* ViewController.swift in Sources */,
+				49841BFD1990338C0028D046 /* Constants.swift in Sources */,
+				49D83E5A198F305600C95110 /* DockerClient.swift in Sources */,
+				49572FB81985D0DE00679771 /* ImagesTableViewController.swift in Sources */,
 				49572F9A1985D09800679771 /* AppDelegate.swift in Sources */,
+				49D83E5C198F307D00C95110 /* DockerImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +423,7 @@
 				49572FB21985D09800679771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49572FB31985D09800679771 /* Build configuration list for PBXNativeTarget "DockerClientTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +432,7 @@
 				49572FB51985D09800679771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
