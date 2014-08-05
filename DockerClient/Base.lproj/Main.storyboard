@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2Pb-fr-alf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EWC-CX-E5U">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
         <!--Images Table View Controller-->
         <scene sceneID="Fpu-gX-9e7">
             <objects>
-                <tableViewController id="2Pb-fr-alf" customClass="ImagesTableViewController" customModule="DockerClient" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f5r-qa-jFr">
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="2Pb-fr-alf" customClass="ImagesTableViewController" customModule="DockerClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f5r-qa-jFr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -25,10 +25,130 @@
                             <outlet property="delegate" destination="2Pb-fr-alf" id="Ad1-oQ-vrn"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Z17-ez-zJ5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpe-CU-kcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-151" y="148"/>
+            <point key="canvasLocation" x="671" y="303"/>
+        </scene>
+        <!--Connect View Controller-->
+        <scene sceneID="n05-gv-pzl">
+            <objects>
+                <viewController id="EWC-CX-E5U" customClass="ConnectViewController" customModule="DockerClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vsj-0C-zPY"/>
+                        <viewControllerLayoutGuide type="bottom" id="b36-Lj-a9u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="59h-sW-PLW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bc4-5J-LvZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" backgroundImage="connectBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectBtnPressed:" destination="EWC-CX-E5U" eventType="touchUpInside" id="D5e-G4-oxm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connectTextField.png" translatesAutoresizingMaskIntoConstraints="NO" id="4nE-9j-OW8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Docker Host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DMR-iI-Fbq">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2196078431372549" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4nE-9j-OW8" firstAttribute="trailing" secondItem="DMR-iI-Fbq" secondAttribute="trailing" id="07C-43-kMc"/>
+                            <constraint firstItem="Bc4-5J-LvZ" firstAttribute="leading" secondItem="4nE-9j-OW8" secondAttribute="leading" id="7ko-lU-03t"/>
+                            <constraint firstItem="Bc4-5J-LvZ" firstAttribute="top" secondItem="DMR-iI-Fbq" secondAttribute="bottom" constant="28" id="8X7-mh-c6g"/>
+                            <constraint firstAttribute="centerX" secondItem="DMR-iI-Fbq" secondAttribute="centerX" id="CDv-k8-kJM"/>
+                            <constraint firstAttribute="centerX" secondItem="4nE-9j-OW8" secondAttribute="centerX" id="FXk-cW-RXC"/>
+                            <constraint firstAttribute="centerX" secondItem="Bc4-5J-LvZ" secondAttribute="centerX" id="LiA-hx-Yba"/>
+                            <constraint firstItem="DMR-iI-Fbq" firstAttribute="bottom" secondItem="4nE-9j-OW8" secondAttribute="bottom" id="NQD-yf-oXV"/>
+                            <constraint firstItem="DMR-iI-Fbq" firstAttribute="leading" secondItem="4nE-9j-OW8" secondAttribute="leading" id="RSh-kL-aTo"/>
+                            <constraint firstItem="4nE-9j-OW8" firstAttribute="centerX" secondItem="Vsj-0C-zPY" secondAttribute="centerX" id="YxO-bM-o7g"/>
+                            <constraint firstItem="DMR-iI-Fbq" firstAttribute="top" secondItem="Vsj-0C-zPY" secondAttribute="bottom" constant="77" id="jaF-9h-yXW"/>
+                            <constraint firstItem="4nE-9j-OW8" firstAttribute="top" secondItem="Vsj-0C-zPY" secondAttribute="bottom" constant="106" id="q8F-h7-TLl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Bc4-5J-LvZ"/>
+                                <exclude reference="4nE-9j-OW8"/>
+                                <exclude reference="DMR-iI-Fbq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="CDv-k8-kJM"/>
+                                <exclude reference="NQD-yf-oXV"/>
+                                <exclude reference="RSh-kL-aTo"/>
+                                <exclude reference="jaF-9h-yXW"/>
+                                <exclude reference="07C-43-kMc"/>
+                                <exclude reference="FXk-cW-RXC"/>
+                                <exclude reference="YxO-bM-o7g"/>
+                                <exclude reference="q8F-h7-TLl"/>
+                                <exclude reference="7ko-lU-03t"/>
+                                <exclude reference="8X7-mh-c6g"/>
+                                <exclude reference="LiA-hx-Yba"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Bc4-5J-LvZ"/>
+                                <include reference="4nE-9j-OW8"/>
+                                <include reference="DMR-iI-Fbq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="CDv-k8-kJM"/>
+                                <include reference="NQD-yf-oXV"/>
+                                <include reference="RSh-kL-aTo"/>
+                                <include reference="jaF-9h-yXW"/>
+                                <include reference="07C-43-kMc"/>
+                                <include reference="FXk-cW-RXC"/>
+                                <include reference="YxO-bM-o7g"/>
+                                <include reference="q8F-h7-TLl"/>
+                                <include reference="7ko-lU-03t"/>
+                                <include reference="8X7-mh-c6g"/>
+                                <include reference="LiA-hx-Yba"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="dockerHostTextField" destination="DMR-iI-Fbq" id="40v-1P-2Bn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYj-8O-UxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141" y="-375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TTJ-h7-LSR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kF8-9k-T1f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2BS-s6-jh5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2Pb-fr-alf" kind="relationship" relationship="rootViewController" id="kmN-5b-UJf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gou-fh-epI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141" y="303"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="connectBtn.png" width="300" height="42"/>
+        <image name="connectTextField.png" width="300" height="1"/>
+    </resources>
 </document>

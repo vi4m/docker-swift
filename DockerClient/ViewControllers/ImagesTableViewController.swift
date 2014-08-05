@@ -14,6 +14,10 @@ class ImagesTableViewController: UITableViewController {
     override func viewDidLoad () {
         super.viewDidLoad()
         
+        self.tableView.registerNib(UINib(nibName: "ImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "imageCellIdentifier")
+        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
         DockerClient.connection.getImages(Constants.URL, port: 4243, completionBlock: dataReceived)
     }
 
@@ -40,10 +44,16 @@ class ImagesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("imageCellIdentifier", forIndexPath: indexPath) as UITableViewCell
-        var repoTags: [String]! = self.images[indexPath.row].repoTags
-        cell.textLabel.text = repoTags[0]
+        var cell: ImagesTableViewCell = tableView.dequeueReusableCellWithIdentifier("imageCellIdentifier", forIndexPath: indexPath) as ImagesTableViewCell!
+        
+        var repoTags = self.images[indexPath.row].repoTags
+        cell.nameLabel.text = repoTags![0]
         return cell
+    }
+    
+    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        return 175
     }
 
     /*
