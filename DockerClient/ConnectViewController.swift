@@ -41,6 +41,18 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateUI() -> Void {
+        self.navigationController.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
+        self.navigationController.navigationBar.translucent = false
+        for view in self.navigationController.navigationBar.subviews {
+            for view2 in view.subviews {
+                if let subView = view2 as? UIImageView {
+                    if subView.frame.size.height < 2 {
+                        subView.removeFromSuperview()
+                    }
+                }
+            }
+        }
+        
         var placeholderColor = UIColor(red: 0.675, green: 0.678, blue: 0.710, alpha: 1)
         dockerHostTextField.attributedPlaceholder = NSAttributedString(string: "Docker Host", attributes: [NSForegroundColorAttributeName: placeholderColor])
         

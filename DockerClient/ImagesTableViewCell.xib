@@ -12,19 +12,16 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qyF-1q-Su5" id="mNH-dj-6r8">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwu-4R-fYa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ImageName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqF-Lv-qKe">
                         <rect key="frame" x="31" y="56" width="259" height="61"/>
                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                        <color key="textColor" red="0.24313725490196078" green="0.29803921568627451" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.2196078431372549" green="0.22745098039215686" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </tableViewCellContentView>
             <connections>
-                <outlet property="cellImage" destination="dwu-4R-fYa" id="cK6-PM-fpN"/>
                 <outlet property="nameLabel" destination="IqF-Lv-qKe" id="AtP-bS-Plc"/>
             </connections>
             <point key="canvasLocation" x="628" y="351"/>

@@ -16,12 +16,13 @@
 		49841C00199043730028D046 /* ImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49841BFF199043730028D046 /* ImagesTableViewCell.xib */; };
 		49841C02199043E50028D046 /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49841C01199043E50028D046 /* ImagesTableViewCell.swift */; };
 		49841C06199058B80028D046 /* imagesTableViewCellBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 49841C05199058B80028D046 /* imagesTableViewCellBg.png */; };
-		49841C12199066B90028D046 /* Untitled-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49841C11199066B90028D046 /* Untitled-1.png */; };
 		49A1CA22199184CC002A6B4C /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1CA21199184CC002A6B4C /* ConnectViewController.swift */; };
 		49A1CA2619918558002A6B4C /* connectBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA2419918558002A6B4C /* connectBtn.png */; };
 		49A1CA2719918558002A6B4C /* connectBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA2519918558002A6B4C /* connectBtn@2x.png */; };
 		49A1CA2F199194F6002A6B4C /* connectTextField.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA2D199194F6002A6B4C /* connectTextField.png */; };
 		49A1CA30199194F6002A6B4C /* connectTextField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA2E199194F6002A6B4C /* connectTextField@2x.png */; };
+		49A1CA341991A499002A6B4C /* slideMenuBarButtonItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA321991A499002A6B4C /* slideMenuBarButtonItem.png */; };
+		49A1CA351991A499002A6B4C /* slideMenuBarButtonItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA331991A499002A6B4C /* slideMenuBarButtonItem@2x.png */; };
 		49D83E5A198F305600C95110 /* DockerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D83E59198F305600C95110 /* DockerClient.swift */; };
 		49D83E5C198F307D00C95110 /* DockerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D83E5B198F307D00C95110 /* DockerImage.swift */; };
 /* End PBXBuildFile section */
@@ -50,12 +51,13 @@
 		49841BFF199043730028D046 /* ImagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesTableViewCell.xib; sourceTree = "<group>"; };
 		49841C01199043E50028D046 /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCell.swift; sourceTree = "<group>"; };
 		49841C05199058B80028D046 /* imagesTableViewCellBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagesTableViewCellBg.png; sourceTree = "<group>"; };
-		49841C11199066B90028D046 /* Untitled-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-1.png"; sourceTree = "<group>"; };
 		49A1CA21199184CC002A6B4C /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		49A1CA2419918558002A6B4C /* connectBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connectBtn.png; sourceTree = "<group>"; };
 		49A1CA2519918558002A6B4C /* connectBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectBtn@2x.png"; sourceTree = "<group>"; };
 		49A1CA2D199194F6002A6B4C /* connectTextField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connectTextField.png; sourceTree = "<group>"; };
 		49A1CA2E199194F6002A6B4C /* connectTextField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectTextField@2x.png"; sourceTree = "<group>"; };
+		49A1CA321991A499002A6B4C /* slideMenuBarButtonItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slideMenuBarButtonItem.png; sourceTree = "<group>"; };
+		49A1CA331991A499002A6B4C /* slideMenuBarButtonItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slideMenuBarButtonItem@2x.png"; sourceTree = "<group>"; };
 		49D83E59198F305600C95110 /* DockerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockerClient.swift; sourceTree = "<group>"; };
 		49D83E5B198F307D00C95110 /* DockerImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockerImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,9 +115,9 @@
 		49572F971985D09800679771 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49A1CA311991A491002A6B4C /* SlideMenu */,
 				49A1CA281991934F002A6B4C /* TextFields */,
 				49A1CA2319918548002A6B4C /* Buttons */,
-				49841C11199066B90028D046 /* Untitled-1.png */,
 				49841C05199058B80028D046 /* imagesTableViewCellBg.png */,
 				49572F981985D09800679771 /* Info.plist */,
 			);
@@ -183,6 +185,15 @@
 				49A1CA2E199194F6002A6B4C /* connectTextField@2x.png */,
 			);
 			name = TextFields;
+			sourceTree = "<group>";
+		};
+		49A1CA311991A491002A6B4C /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				49A1CA321991A499002A6B4C /* slideMenuBarButtonItem.png */,
+				49A1CA331991A499002A6B4C /* slideMenuBarButtonItem@2x.png */,
+			);
+			name = SlideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +279,10 @@
 				49572F9F1985D09800679771 /* Main.storyboard in Resources */,
 				49A1CA30199194F6002A6B4C /* connectTextField@2x.png in Resources */,
 				49A1CA2719918558002A6B4C /* connectBtn@2x.png in Resources */,
+				49A1CA341991A499002A6B4C /* slideMenuBarButtonItem.png in Resources */,
 				49A1CA2619918558002A6B4C /* connectBtn.png in Resources */,
-				49841C12199066B90028D046 /* Untitled-1.png in Resources */,
 				49572FA11985D09800679771 /* Images.xcassets in Resources */,
+				49A1CA351991A499002A6B4C /* slideMenuBarButtonItem@2x.png in Resources */,
 				49A1CA2F199194F6002A6B4C /* connectTextField.png in Resources */,
 				49841C06199058B80028D046 /* imagesTableViewCellBg.png in Resources */,
 				49841C00199043730028D046 /* ImagesTableViewCell.xib in Resources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EWC-CX-E5U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CMN-j2-O57">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
@@ -8,10 +8,11 @@
         <scene sceneID="Fpu-gX-9e7">
             <objects>
                 <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="2Pb-fr-alf" customClass="ImagesTableViewController" customModule="DockerClient" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f5r-qa-jFr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f5r-qa-jFr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCellIdentifier" id="aeF-9l-YdN">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -25,11 +26,18 @@
                             <outlet property="delegate" destination="2Pb-fr-alf" id="Ad1-oQ-vrn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Z17-ez-zJ5"/>
+                    <navigationItem key="navigationItem" id="Z17-ez-zJ5">
+                        <barButtonItem key="leftBarButtonItem" image="slideMenuBarButtonItem.png" id="grf-LT-og9">
+                            <color key="tintColor" red="0.61176470588235299" green="0.61568627450980395" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="slideMenuBarButtonItem:" destination="2Pb-fr-alf" id="U2Z-wm-Hij"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpe-CU-kcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="303"/>
+            <point key="canvasLocation" x="1554" y="-375"/>
         </scene>
         <!--Connect View Controller-->
         <scene sceneID="n05-gv-pzl">
@@ -48,20 +56,28 @@
                                 <state key="normal" backgroundImage="connectBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="50" y="155" width="300" height="42"/>
+                                </variation>
                                 <connections>
                                     <action selector="connectBtnPressed:" destination="EWC-CX-E5U" eventType="touchUpInside" id="D5e-G4-oxm"/>
+                                    <segue destination="2Pb-fr-alf" kind="show" id="8DB-jx-7i7"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connectTextField.png" translatesAutoresizingMaskIntoConstraints="NO" id="4nE-9j-OW8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="50" y="126" width="300" height="1"/>
+                                </variation>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Docker Host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DMR-iI-Fbq">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                    <rect key="frame" x="50" y="97" width="300" height="30"/>
                                 </variation>
                             </textField>
                         </subviews>
@@ -120,35 +136,40 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="mE7-gx-SqD"/>
                     <connections>
                         <outlet property="dockerHostTextField" destination="DMR-iI-Fbq" id="40v-1P-2Bn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WYj-8O-UxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-141" y="-375"/>
+            <point key="canvasLocation" x="777" y="-375"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="TTJ-h7-LSR">
+        <scene sceneID="z43-B6-Ixp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kF8-9k-T1f" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CMN-j2-O57" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2BS-s6-jh5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Gk-Sg-8Wu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="m1a-fs-ZuW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="2Pb-fr-alf" kind="relationship" relationship="rootViewController" id="kmN-5b-UJf"/>
+                        <segue destination="EWC-CX-E5U" kind="relationship" relationship="rootViewController" id="7qK-ro-fDf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gou-fh-epI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbB-DS-G1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-141" y="303"/>
+            <point key="canvasLocation" x="-141" y="-375"/>
         </scene>
     </scenes>
     <resources>
         <image name="connectBtn.png" width="300" height="42"/>
         <image name="connectTextField.png" width="300" height="1"/>
+        <image name="slideMenuBarButtonItem.png" width="32" height="19"/>
     </resources>
 </document>

@@ -13,7 +13,7 @@ class ImagesTableViewController: UITableViewController {
     
     override func viewDidLoad () {
         super.viewDidLoad()
-        
+        self.tableView.backgroundColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
         self.tableView.registerNib(UINib(nibName: "ImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "imageCellIdentifier")
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
@@ -52,8 +52,12 @@ class ImagesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        tableView.separatorColor = UIColor.whiteColor()
         return 175
+    }
+    @IBAction func slideMenuBarButtonItem(sender: UIBarButtonItem) {
+        self.navigationController.popViewControllerAnimated(true)
     }
 
     /*

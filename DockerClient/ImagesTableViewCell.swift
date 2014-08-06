@@ -14,8 +14,6 @@ class ImagesTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        cellImage.image = UIImage(named: "Untitled-1.png")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
