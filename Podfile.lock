@@ -1,0 +1,10 @@
+PODS:
+  - AMSlideMenu (1.5.3)
+
+DEPENDENCIES:
+  - AMSlideMenu (~> 1.5.3)
+
+SPEC CHECKSUMS:
+  AMSlideMenu: ab0c9313c74eac61e360d2a714d2d8202f6de916
+
+COCOAPODS: 0.33.1

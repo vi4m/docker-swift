@@ -1,64 +1,24 @@
 //
-//  ImagesTableViewController.swift
+//  ContainersTableViewController.swift
 //  DockerClient
 //
-//  Created by Andrew Weiss on 7/27/14.
+//  Created by Andrew Weiss on 8/7/14.
 //  Copyright (c) 2014 Andrew Weiss. All rights reserved.
 //
 
 import UIKit
 
-class ImagesTableViewController: UITableViewController {
-    var dockerHostUrl: String?
-    var images = [DockerImage]()
-    
-    override func viewDidLoad () {
+class ContainersTableViewController: UITableViewController {
+
+    override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
         
-        if let url = dockerHostUrl {
-            DockerClient.connection.getImages(url, port: 4243, completionBlock: dataReceived)
-        }
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
-    }
-
-    func dataReceived(err: NSErrorPointer, responseArray: [DockerImage]) -> Void {
-        self.images = responseArray
-        dispatch_async(dispatch_get_main_queue(), {
-            self.tableView.reloadData()
-        })
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        return 1
-    }
-
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return self.images.count
-    }
-    
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        var cell: ImagesTableViewCell = tableView.dequeueReusableCellWithIdentifier("imageCellIdentifier", forIndexPath: indexPath) as ImagesTableViewCell!
-        
-        var repoTags = self.images[indexPath.row].repoTags
-        cell.nameLabel.text = repoTags![0]
-        return cell
-    }
-    
-    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        tableView.separatorColor = UIColor.whiteColor()
-        return 175
-    }
-    @IBAction func slideMenuBarButtonItem(sender: UIBarButtonItem) {
-        self.navigationController.popViewControllerAnimated(true)
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     func updateUI() -> Void {
@@ -79,6 +39,35 @@ class ImagesTableViewController: UITableViewController {
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    // MARK: - Table view data source
+
+    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
+        return 0
+    }
+
+    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return 0
+    }
+
+    /*
+    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+
+        // Configure the cell...
+
+        return cell
+    }
+    */
 
     /*
     // Override to support conditional editing of the table view.
