@@ -1,20 +1,20 @@
 //
-//  ContainersTableViewController.swift
+//  DashboardTableViewController.swift
 //  DockerClient
 //
-//  Created by Andrew Weiss on 8/7/14.
+//  Created by Andrew Weiss on 8/9/14.
 //  Copyright (c) 2014 Andrew Weiss. All rights reserved.
 //
 
 import UIKit
 
-class ContainersTableViewController: UITableViewController {
+class DashboardTableViewController: UITableViewController {
     @IBOutlet weak var slideMenuBarButtonItem: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -45,9 +45,10 @@ class ContainersTableViewController: UITableViewController {
         }
         
         self.tableView.backgroundColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
-        self.tableView.registerNib(UINib(nibName: "ImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "imageCellIdentifier")
-        
+        self.tableView.registerNib(UINib(nibName: "DashboardTableViewCell", bundle: nil), forCellReuseIdentifier: "dashboardCellIdentifier")
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.tableView.scrollEnabled = false
+        self.tableView.tableFooterView = UIView(frame: CGRectZero) 
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,24 +61,25 @@ class ContainersTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return 4
     }
 
-    /*
+    
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
+        var cell: DashboardTableViewCell = tableView.dequeueReusableCellWithIdentifier("dashboardCellIdentifier", forIndexPath: indexPath) as DashboardTableViewCell!
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return 160
+    }
 
     /*
     // Override to support conditional editing of the table view.

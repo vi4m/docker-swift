@@ -9,6 +9,8 @@
 import UIKit
 
 class ImagesTableViewController: UITableViewController {
+    @IBOutlet weak var slideMenuBarButtonItem: UIBarButtonItem!
+    
     var dockerHostUrl: String?
     var images = [DockerImage]()
     
@@ -17,13 +19,12 @@ class ImagesTableViewController: UITableViewController {
         updateUI()
         
         if let url = dockerHostUrl {
-            DockerClient.connection.getImages(url, port: 4243, completionBlock: dataReceived)
+            DockerClient.connection.getImages(url, port: 4243, completionBlock: imagesReceived)
         }
-
     }
 
-    func dataReceived(err: NSErrorPointer, responseArray: [DockerImage]) -> Void {
-        self.images = responseArray
+    func imagesReceived(err: NSErrorPointer, images: [DockerImage]) -> Void {
+        self.images = images
         dispatch_async(dispatch_get_main_queue(), {
             self.tableView.reloadData()
         })
@@ -55,12 +56,9 @@ class ImagesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         tableView.separatorColor = UIColor.whiteColor()
-        return 175
+        return 170
     }
-    @IBAction func slideMenuBarButtonItem(sender: UIBarButtonItem) {
-        self.navigationController.popViewControllerAnimated(true)
-    }
-    
+
     func updateUI() -> Void {
         self.navigationController.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
         self.navigationController.navigationBar.translucent = false
@@ -72,6 +70,15 @@ class ImagesTableViewController: UITableViewController {
                     }
                 }
             }
+        }
+        
+        var rvc: SWRevealViewController = self.revealViewController()
+        if (rvc != nil) {
+            rvc.toggleAnimationDuration = 0.16
+            rvc.toggleAnimationType = SWRevealToggleAnimationType.EaseOut
+            self.slideMenuBarButtonItem.target = self.revealViewController()
+            self.slideMenuBarButtonItem.action = "revealToggle:"
+            self.navigationController.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
         self.tableView.backgroundColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)

@@ -29,10 +29,8 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        var smmvc: SlideMenuMainViewController? = segue.destinationViewController as? SlideMenuMainViewController
-        if let dtvc = smmvc {
-            dtvc.dockerHostUrl = dockerHostTextField.text
-            dockerHostTextField.text = ""
+        if let dvc = segue.destinationViewController as? RevealViewController {
+            dvc.dockerHostUrl = dockerHostTextField.text
         }
     }
 

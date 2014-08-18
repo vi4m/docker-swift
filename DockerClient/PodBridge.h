@@ -6,4 +6,4 @@
 //  Copyright (c) 2014 Andrew Weiss. All rights reserved.
 //
 
-#import <AMSlideMenu/AMSlideMenuMainViewController.h>
+#import "SWRevealViewController.h"

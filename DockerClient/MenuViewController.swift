@@ -1,53 +1,25 @@
 //
-//  ContainersTableViewController.swift
+//  MenuViewController.swift
 //  DockerClient
 //
-//  Created by Andrew Weiss on 8/7/14.
+//  Created by Andrew Weiss on 8/8/14.
 //  Copyright (c) 2014 Andrew Weiss. All rights reserved.
 //
 
 import UIKit
 
-class ContainersTableViewController: UITableViewController {
-    @IBOutlet weak var slideMenuBarButtonItem: UIBarButtonItem!
-
+class MenuViewController: UITableViewController {
+    var dockerHostUrl: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    func updateUI() -> Void {
-        self.navigationController.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
-        self.navigationController.navigationBar.translucent = false
-        for view in self.navigationController.navigationBar.subviews {
-            for view2 in view.subviews {
-                if let subView = view2 as? UIImageView {
-                    if subView.frame.size.height < 2 {
-                        subView.removeFromSuperview()
-                    }
-                }
-            }
-        }
-        
-        var rvc: SWRevealViewController = self.revealViewController()
-        if (rvc != nil) {
-            rvc.toggleAnimationDuration = 0.16
-            rvc.toggleAnimationType = SWRevealToggleAnimationType.EaseOut
-            self.slideMenuBarButtonItem.target = self.revealViewController()
-            self.slideMenuBarButtonItem.action = "revealToggle:"
-            self.navigationController.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        
-        self.tableView.backgroundColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
-        self.tableView.registerNib(UINib(nibName: "ImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "imageCellIdentifier")
-        
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,24 +32,41 @@ class ContainersTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return 3
     }
 
-    /*
+    
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
+        var cellIdentifier = "cellIdentifier"
+        switch (indexPath.row) {
+            case 0:
+                cellIdentifier = "dashboardCellIdentifier"
+                break
+            case 1:
+                cellIdentifier = "containersCellIdentifier"
+                break
+            case 2:
+                cellIdentifier = "imagesCellIdentifier"
+            default:
+                break
+        }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        cell.backgroundColor = UIColor(red: 0.541, green: 0.545, blue: 0.588, alpha: 1)
         return cell
     }
-    */
+    
+    
+    func updateUI() -> Void {
+        self.tableView.backgroundColor = UIColor(red: 0.541, green: 0.545, blue: 0.588, alpha: 1)
+        // self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -114,14 +103,18 @@ class ContainersTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if let tableViewCell = sender as? UITableViewCell {
+            var nc: UINavigationController = segue.destinationViewController as UINavigationController
+            if let itvc = nc.childViewControllers.first as? ImagesTableViewController {
+                if (dockerHostUrl != nil) {
+                    itvc.dockerHostUrl = dockerHostUrl
+                }
+            }
+        }
     }
-    */
 
 }
