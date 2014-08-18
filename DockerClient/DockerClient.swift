@@ -84,9 +84,9 @@ class DockerClient {
             
             if let imageDetails: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary {
                 var image = DockerImage()
-                image.architecture = (imageDetails["Architecture"] as String)
-                image.author = (imageDetails["Author"] as String)
-                image.comment = (imageDetails["Comment"] as String)
+                image.architecture = imageDetails["Architecture"] as String
+                image.author = imageDetails["Author"] as String
+                image.comment = imageDetails["Comment"] as String
                 var configJSON: NSDictionary = imageDetails["Config"] as NSDictionary
                 image.config = DockerImage.Config(
                     attachStderr: configJSON["AttachStderr"] as Bool,
@@ -113,7 +113,7 @@ class DockerClient {
                     volumes: configJSON["Volumes"] as [String: AnyObject],
                     workingDir: configJSON["WorkingDir"] as String
                 )
-                image.container = (imageDetails["Container"] as String)
+                image.container = imageDetails["Container"] as String
                 var containerConfigJSON: NSDictionary = imageDetails["ContainerConfig"] as NSDictionary
                 image.containerConfig = DockerImage.ContainerConfig(
                     attachStderr: containerConfigJSON["AttachStderr"] as Bool,
@@ -143,11 +143,11 @@ class DockerClient {
                 var formatter: NSDateFormatter = NSDateFormatter()
                 formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
                 image.created = formatter.dateFromString(imageDetails["Created"] as String)
-                image.dockerVersion = (imageDetails["DockerVersion"] as String)
-                image.id = (imageDetails["Id"] as String)
-                image.os = (imageDetails["Os"] as String)
-                image.parent = (imageDetails["Parent"] as String)
-                image.size = (imageDetails["Size"] as Int)
+                image.dockerVersion = imageDetails["DockerVersion"] as String
+                image.id = imageDetails["Id"] as String
+                image.os = imageDetails["Os"] as String
+                image.parent = imageDetails["Parent"] as String
+                image.size = imageDetails["Size"] as Int
                 
                 completionBlock(error: &err, image: image)
             }
