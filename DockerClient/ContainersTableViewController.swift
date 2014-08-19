@@ -35,13 +35,14 @@ class ContainersTableViewController: UITableViewController {
             }
         }
         
-        var rvc: SWRevealViewController = self.revealViewController()
-        rvc.toggleAnimationDuration = 0.16
-        rvc.toggleAnimationType = SWRevealToggleAnimationType.EaseOut
-        self.slideMenuBarButtonItem.target = self.revealViewController()
-        self.slideMenuBarButtonItem.action = "revealToggle:"
-        self.navigationController.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
+        if let rvc: SWRevealViewController = self.revealViewController() {
+            rvc.toggleAnimationDuration = 0.16
+            rvc.toggleAnimationType = SWRevealToggleAnimationType.EaseOut
+            self.slideMenuBarButtonItem.target = self.revealViewController()
+            self.slideMenuBarButtonItem.action = "revealToggle:"
+            self.navigationController.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+
         self.tableView.backgroundColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
         self.tableView.registerNib(UINib(nibName: "ImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "imageCellIdentifier")
         
