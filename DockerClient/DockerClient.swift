@@ -36,7 +36,7 @@ class DockerClient {
         
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url, completionHandler: {(data: NSData!, response: NSURLResponse!, error:NSError!) -> Void in
-            if (error) {
+            if ((error) != nil) {
                 println(error.localizedDescription)
             }
             
@@ -76,7 +76,7 @@ class DockerClient {
         
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url, completionHandler: {(data: NSData!, response: NSURLResponse!, error:NSError!) -> Void in
-            if (error) {
+            if ((error) != nil) {
                 println(error.localizedDescription)
             }
             
@@ -96,7 +96,7 @@ class DockerClient {
                     cpuShares: configJSON["CpuShares"] as Int,
                     cpuset: configJSON["Cpuset"] as String,
                     domainname: configJSON["Domainname"] as String,
-                    entrypoint: configJSON["Entrypoint"],
+                    entrypoint: configJSON["Entrypoint"]!,
                     env: configJSON["Env"] as [String],
                     exposedPorts: configJSON["ExposedPorts"] as [String: AnyObject],
                     hostname: configJSON["Hostname"] as String,
@@ -104,9 +104,9 @@ class DockerClient {
                     memory: configJSON["Memory"] as Int,
                     memorySwap: configJSON["MemorySwap"] as Int,
                     networkDisabled: configJSON["NetworkDisabled"] as Bool,
-                    onBuild: configJSON["OnBuild"],
+                    onBuild: configJSON["OnBuild"]!,
                     openStdin: configJSON["OpenStdin"] as Bool,
-                    portSpecs: configJSON["PortSpecs"],
+                    portSpecs: configJSON["PortSpecs"]!,
                     stdinOnce: configJSON["StdinOnce"] as Bool,
                     tty: configJSON["Tty"] as Bool,
                     user: configJSON["User"] as String,
@@ -123,7 +123,7 @@ class DockerClient {
                     cpuShares: containerConfigJSON["CpuShares"] as Int,
                     cpuset: containerConfigJSON["Cpuset"] as String,
                     domainname: containerConfigJSON["Domainname"] as String,
-                    entrypoint: containerConfigJSON["Entrypoint"],
+                    entrypoint: containerConfigJSON["Entrypoint"]!,
                     env: containerConfigJSON["Env"] as [String],
                     exposedPorts: containerConfigJSON["ExposedPorts"] as [String: AnyObject],
                     hostname: containerConfigJSON["Hostname"] as String,
@@ -131,9 +131,9 @@ class DockerClient {
                     memory: containerConfigJSON["Memory"] as Int,
                     memorySwap: containerConfigJSON["MemorySwap"] as Int,
                     networkDisabled: containerConfigJSON["NetworkDisabled"] as Bool,
-                    onBuild: containerConfigJSON["OnBuild"],
+                    onBuild: containerConfigJSON["OnBuild"]!,
                     openStdin: containerConfigJSON["OpenStdin"] as Bool,
-                    portSpecs: containerConfigJSON["PortSpecs"],
+                    portSpecs: containerConfigJSON["PortSpecs"]!,
                     stdinOnce: containerConfigJSON["StdinOnce"] as Bool,
                     tty: containerConfigJSON["Tty"] as Bool,
                     user: containerConfigJSON["User"] as String,
