@@ -129,7 +129,7 @@ class ImagesTableViewController: UITableViewController {
     */
 
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if let dvc = segue.destinationViewController as? ImageDetailTableViewController {
+        if let dvc = segue.destinationViewController as? ImageDetailViewController {
             if let indexPath = sender as? NSIndexPath {
                 // dvc.image = self.images[indexPath.row]
                 dvc.image = DockerImage()

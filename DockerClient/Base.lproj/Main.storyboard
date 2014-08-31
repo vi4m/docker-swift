@@ -202,7 +202,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="p3s-ls-PNb" kind="show" id="Bb6-qD-5PO"/>
+                                    <segue destination="p3s-ls-PNb" kind="show" identifier="imageDetailSegue" id="Bb6-qD-5PO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -224,15 +224,16 @@
             </objects>
             <point key="canvasLocation" x="3858" y="-1771"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Detail View Controller-->
         <scene sceneID="x5H-gG-qO7">
             <objects>
-                <viewController id="p3s-ls-PNb" sceneMemberID="viewController">
+                <viewController id="p3s-ls-PNb" customClass="ImageDetailViewController" customModule="DockerClient" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i1d-x4-Ywb"/>
                         <viewControllerLayoutGuide type="bottom" id="lRZ-4J-Qwk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F9o-KR-lTP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

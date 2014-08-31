@@ -9,7 +9,8 @@
 import UIKit
 
 class ImageDetailViewController: UIViewController {
-
+    var image: DockerImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
