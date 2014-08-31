@@ -42,14 +42,16 @@ class ImagesTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return self.images.count
+        // return self.images.count
+        return 1
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        var cell: ImagesTableViewCell = tableView.dequeueReusableCellWithIdentifier("imageCellIdentifier", forIndexPath: indexPath) as ImagesTableViewCell!
+        var cell: ImagesTableViewCell = tableView.dequeueReusableCellWithIdentifier("imageCellIdentifier", forIndexPath: indexPath) as ImagesTableViewCell
         
-        var repoTags = self.images[indexPath.row].repoTags
-        cell.nameLabel.text = repoTags![0]
+        // var repoTags = self.images[indexPath.row].repoTags
+        // cell.nameLabel.text = repoTags![0]
+        cell.nameLabel.text = "Testing"
         return cell
     }
     
@@ -72,6 +74,7 @@ class ImagesTableViewController: UITableViewController {
             }
         }
         
+        
         if let rvc: SWRevealViewController = self.revealViewController() {
             rvc.toggleAnimationDuration = 0.16
             rvc.toggleAnimationType = SWRevealToggleAnimationType.EaseOut
@@ -84,6 +87,10 @@ class ImagesTableViewController: UITableViewController {
         self.tableView.registerNib(UINib(nibName: "ImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "imageCellIdentifier")
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+    }
+    
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        self.performSegueWithIdentifier("imageDetailSegue", sender: indexPath)
     }
 
     /*
@@ -121,14 +128,13 @@ class ImagesTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if let dvc = segue.destinationViewController as? ImageDetailTableViewController {
+            if let indexPath = sender as? NSIndexPath {
+                // dvc.image = self.images[indexPath.row]
+                dvc.image = DockerImage()
+            }
+        }
     }
-    */
 
 }

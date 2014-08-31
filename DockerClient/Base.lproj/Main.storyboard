@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CMN-j2-O57">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CMN-j2-O57">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -190,7 +190,7 @@
         <scene sceneID="Fpu-gX-9e7">
             <objects>
                 <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="2Pb-fr-alf" customClass="ImagesTableViewController" customModule="DockerClient" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f5r-qa-jFr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f5r-qa-jFr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,6 +201,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aeF-9l-YdN" id="3ry-PA-PeE">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="p3s-ls-PNb" kind="show" id="Bb6-qD-5PO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -220,6 +223,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpe-CU-kcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3858" y="-1771"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x5H-gG-qO7">
+            <objects>
+                <viewController id="p3s-ls-PNb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i1d-x4-Ywb"/>
+                        <viewControllerLayoutGuide type="bottom" id="lRZ-4J-Qwk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F9o-KR-lTP">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2G-lG-Jyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4573.5" y="-1771"/>
         </scene>
         <!--Container Detail View Controller-->
         <scene sceneID="Ds4-Ep-Oee">
@@ -433,6 +453,6 @@
         <image name="slideMenuBarButtonItem.png" width="32" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PlM-Ew-H7m"/>
+        <segue reference="MxB-ih-J5e"/>
     </inferredMetricsTieBreakers>
 </document>

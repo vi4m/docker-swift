@@ -20,6 +20,8 @@ class ImagesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        self.selectionStyle = UITableViewCellSelectionStyle.None
+        self.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
     }
 
 }

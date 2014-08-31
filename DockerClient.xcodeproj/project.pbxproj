@@ -7,35 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49377A301996BA44000F0BB2 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49377A2F1996BA43000F0BB2 /* RevealViewController.swift */; };
-		49510C9A19942EA00065F955 /* ContainersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49510C9919942EA00065F955 /* ContainersTableViewController.swift */; };
 		49572F9A1985D09800679771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49572F991985D09800679771 /* AppDelegate.swift */; };
 		49572F9F1985D09800679771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49572F9D1985D09800679771 /* Main.storyboard */; };
 		49572FA11985D09800679771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49572FA01985D09800679771 /* Images.xcassets */; };
 		49572FAD1985D09800679771 /* DockerClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49572FAC1985D09800679771 /* DockerClientTests.swift */; };
-		49572FB81985D0DE00679771 /* ImagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49572FB71985D0DE00679771 /* ImagesTableViewController.swift */; };
 		495D4A02199550210067CA3D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495D4A01199550210067CA3D /* SWRevealViewController.m */; };
-		495D4A04199552110067CA3D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495D4A03199552110067CA3D /* MenuViewController.swift */; };
+		496A4BCC19ABEB2B00289242 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BC519ABEB2B00289242 /* ConnectViewController.swift */; };
+		496A4BCD19ABEB2B00289242 /* ContainerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BC619ABEB2B00289242 /* ContainerDetailViewController.swift */; };
+		496A4BCE19ABEB2B00289242 /* ContainersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BC719ABEB2B00289242 /* ContainersTableViewController.swift */; };
+		496A4BCF19ABEB2B00289242 /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BC819ABEB2B00289242 /* DashboardTableViewController.swift */; };
+		496A4BD019ABEB2B00289242 /* ImagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BC919ABEB2B00289242 /* ImagesTableViewController.swift */; };
+		496A4BD119ABEB2B00289242 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BCA19ABEB2B00289242 /* MenuViewController.swift */; };
+		496A4BD219ABEB2B00289242 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BCB19ABEB2B00289242 /* RevealViewController.swift */; };
+		496A4BD719ABEB7900289242 /* DockerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BD419ABEB7900289242 /* DockerClient.swift */; };
+		496A4BD819ABEB7900289242 /* DockerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BD519ABEB7900289242 /* DockerContainer.swift */; };
+		496A4BD919ABEB7900289242 /* DockerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BD619ABEB7900289242 /* DockerImage.swift */; };
+		496A4BDE19ABEBB800289242 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BDA19ABEBB800289242 /* DashboardTableViewCell.swift */; };
+		496A4BDF19ABEBB800289242 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496A4BDB19ABEBB800289242 /* DashboardTableViewCell.xib */; };
+		496A4BE019ABEBB800289242 /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BDC19ABEBB800289242 /* ImagesTableViewCell.swift */; };
+		496A4BE119ABEBB800289242 /* ImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496A4BDD19ABEBB800289242 /* ImagesTableViewCell.xib */; };
+		496A4BE619AC04D400289242 /* ImageDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BE419AC04D400289242 /* ImageDetailsTableViewCell.swift */; };
+		496A4BE719AC04D400289242 /* ImageDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496A4BE519AC04D400289242 /* ImageDetailsTableViewCell.xib */; };
+		496A4BEE19AC09E300289242 /* meter.png in Resources */ = {isa = PBXBuildFile; fileRef = 496A4BEC19AC09E300289242 /* meter.png */; };
+		496A4BEF19AC09E300289242 /* meter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 496A4BED19AC09E300289242 /* meter@2x.png */; };
+		496A4BF119AC0D0A00289242 /* ImageDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496A4BF019AC0D0A00289242 /* ImageDetailsView.xib */; };
+		496A4BF419AC0EEE00289242 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A4BF219AC0EEE00289242 /* ImageDetailViewController.swift */; };
+		496A4BF519AC0EEE00289242 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496A4BF319AC0EEE00289242 /* ImageDetailViewController.xib */; };
 		49841BFD1990338C0028D046 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49841BFC1990338C0028D046 /* Constants.swift */; };
-		49841C00199043730028D046 /* ImagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49841BFF199043730028D046 /* ImagesTableViewCell.xib */; };
-		49841C02199043E50028D046 /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49841C01199043E50028D046 /* ImagesTableViewCell.swift */; };
 		49841C06199058B80028D046 /* imagesTableViewCellBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 49841C05199058B80028D046 /* imagesTableViewCellBg.png */; };
-		4994B4061996D2A3004991FB /* ContainerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994B4051996D2A3004991FB /* ContainerDetailViewController.swift */; };
-		4994B4081996D7D4004991FB /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994B4071996D7D4004991FB /* DashboardTableViewController.swift */; };
-		4994B40D1996D987004991FB /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994B40B1996D987004991FB /* DashboardTableViewCell.swift */; };
-		4994B40E1996D987004991FB /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994B40C1996D987004991FB /* DashboardTableViewCell.xib */; };
 		4994B4111996E20B004991FB /* dashboardTableViewCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 4994B40F1996E20B004991FB /* dashboardTableViewCell.png */; };
 		4994B4121996E20B004991FB /* dashboardTableViewCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4994B4101996E20B004991FB /* dashboardTableViewCell@2x.png */; };
-		49A1CA22199184CC002A6B4C /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A1CA21199184CC002A6B4C /* ConnectViewController.swift */; };
 		49A1CA2619918558002A6B4C /* connectBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA2419918558002A6B4C /* connectBtn.png */; };
 		49A1CA2719918558002A6B4C /* connectBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA2519918558002A6B4C /* connectBtn@2x.png */; };
 		49A1CA2F199194F6002A6B4C /* connectTextField.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA2D199194F6002A6B4C /* connectTextField.png */; };
 		49A1CA30199194F6002A6B4C /* connectTextField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA2E199194F6002A6B4C /* connectTextField@2x.png */; };
 		49A1CA341991A499002A6B4C /* slideMenuBarButtonItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA321991A499002A6B4C /* slideMenuBarButtonItem.png */; };
 		49A1CA351991A499002A6B4C /* slideMenuBarButtonItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A1CA331991A499002A6B4C /* slideMenuBarButtonItem@2x.png */; };
-		49D83E5A198F305600C95110 /* DockerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D83E59198F305600C95110 /* DockerClient.swift */; };
-		49D83E5C198F307D00C95110 /* DockerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D83E5B198F307D00C95110 /* DockerImage.swift */; };
-		49FB883219A188D7009C8566 /* DockerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FB883119A188D7009C8566 /* DockerContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		49377A2F1996BA43000F0BB2 /* RevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
 		49510C901993F7A10065F955 /* PodBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodBridge.h; sourceTree = "<group>"; };
-		49510C9919942EA00065F955 /* ContainersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainersTableViewController.swift; sourceTree = "<group>"; };
 		49572F941985D09800679771 /* DockerClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DockerClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49572F981985D09800679771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49572F991985D09800679771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,30 +65,39 @@
 		49572FA61985D09800679771 /* DockerClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DockerClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49572FAB1985D09800679771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49572FAC1985D09800679771 /* DockerClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerClientTests.swift; sourceTree = "<group>"; };
-		49572FB71985D0DE00679771 /* ImagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesTableViewController.swift; path = ViewControllers/ImagesTableViewController.swift; sourceTree = "<group>"; };
 		495D4A00199550210067CA3D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		495D4A01199550210067CA3D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		495D4A03199552110067CA3D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		496A4BC519ABEB2B00289242 /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectViewController.swift; path = ViewControllers/ConnectViewController.swift; sourceTree = "<group>"; };
+		496A4BC619ABEB2B00289242 /* ContainerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerDetailViewController.swift; path = ViewControllers/ContainerDetailViewController.swift; sourceTree = "<group>"; };
+		496A4BC719ABEB2B00289242 /* ContainersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainersTableViewController.swift; path = ViewControllers/ContainersTableViewController.swift; sourceTree = "<group>"; };
+		496A4BC819ABEB2B00289242 /* DashboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardTableViewController.swift; path = ViewControllers/DashboardTableViewController.swift; sourceTree = "<group>"; };
+		496A4BC919ABEB2B00289242 /* ImagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesTableViewController.swift; path = ViewControllers/ImagesTableViewController.swift; sourceTree = "<group>"; };
+		496A4BCA19ABEB2B00289242 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ViewControllers/MenuViewController.swift; sourceTree = "<group>"; };
+		496A4BCB19ABEB2B00289242 /* RevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RevealViewController.swift; path = ViewControllers/RevealViewController.swift; sourceTree = "<group>"; };
+		496A4BD419ABEB7900289242 /* DockerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DockerClient.swift; path = DockerClient/DockerClient.swift; sourceTree = "<group>"; };
+		496A4BD519ABEB7900289242 /* DockerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DockerContainer.swift; path = DockerClient/DockerContainer.swift; sourceTree = "<group>"; };
+		496A4BD619ABEB7900289242 /* DockerImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DockerImage.swift; path = DockerClient/DockerImage.swift; sourceTree = "<group>"; };
+		496A4BDA19ABEBB800289242 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardTableViewCell.swift; path = UI/DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		496A4BDB19ABEBB800289242 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashboardTableViewCell.xib; path = UI/DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		496A4BDC19ABEBB800289242 /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesTableViewCell.swift; path = UI/ImagesTableViewCell.swift; sourceTree = "<group>"; };
+		496A4BDD19ABEBB800289242 /* ImagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImagesTableViewCell.xib; path = UI/ImagesTableViewCell.xib; sourceTree = "<group>"; };
+		496A4BE419AC04D400289242 /* ImageDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDetailsTableViewCell.swift; path = UI/ImageDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		496A4BE519AC04D400289242 /* ImageDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageDetailsTableViewCell.xib; path = UI/ImageDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		496A4BEC19AC09E300289242 /* meter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meter.png; sourceTree = "<group>"; };
+		496A4BED19AC09E300289242 /* meter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meter@2x.png"; sourceTree = "<group>"; };
+		496A4BF019AC0D0A00289242 /* ImageDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageDetailsView.xib; sourceTree = "<group>"; };
+		496A4BF219AC0EEE00289242 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDetailViewController.swift; path = ViewControllers/ImageDetailViewController.swift; sourceTree = "<group>"; };
+		496A4BF319AC0EEE00289242 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageDetailViewController.xib; path = ViewControllers/ImageDetailViewController.xib; sourceTree = "<group>"; };
 		49841BFC1990338C0028D046 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		49841BFF199043730028D046 /* ImagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesTableViewCell.xib; sourceTree = "<group>"; };
-		49841C01199043E50028D046 /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCell.swift; sourceTree = "<group>"; };
 		49841C05199058B80028D046 /* imagesTableViewCellBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagesTableViewCellBg.png; sourceTree = "<group>"; };
-		4994B4051996D2A3004991FB /* ContainerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerDetailViewController.swift; sourceTree = "<group>"; };
-		4994B4071996D7D4004991FB /* DashboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewController.swift; sourceTree = "<group>"; };
-		4994B40B1996D987004991FB /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
-		4994B40C1996D987004991FB /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
 		4994B40F1996E20B004991FB /* dashboardTableViewCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboardTableViewCell.png; sourceTree = "<group>"; };
 		4994B4101996E20B004991FB /* dashboardTableViewCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dashboardTableViewCell@2x.png"; sourceTree = "<group>"; };
-		49A1CA21199184CC002A6B4C /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		49A1CA2419918558002A6B4C /* connectBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connectBtn.png; sourceTree = "<group>"; };
 		49A1CA2519918558002A6B4C /* connectBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectBtn@2x.png"; sourceTree = "<group>"; };
 		49A1CA2D199194F6002A6B4C /* connectTextField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connectTextField.png; sourceTree = "<group>"; };
 		49A1CA2E199194F6002A6B4C /* connectTextField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectTextField@2x.png"; sourceTree = "<group>"; };
 		49A1CA321991A499002A6B4C /* slideMenuBarButtonItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slideMenuBarButtonItem.png; sourceTree = "<group>"; };
 		49A1CA331991A499002A6B4C /* slideMenuBarButtonItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slideMenuBarButtonItem@2x.png"; sourceTree = "<group>"; };
-		49D83E59198F305600C95110 /* DockerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockerClient.swift; sourceTree = "<group>"; };
-		49D83E5B198F307D00C95110 /* DockerImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockerImage.swift; sourceTree = "<group>"; };
-		49FB883119A188D7009C8566 /* DockerContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockerContainer.swift; sourceTree = "<group>"; };
 		784E3DBDE5494C768B8EA37C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB09FB2E9D774BA5AA7B6AE6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				49841BFE199043510028D046 /* UI */,
-				49572FB91985D0EF00679771 /* Model */,
 				49572FB61985D09F00679771 /* ViewControllers */,
 				49572F991985D09800679771 /* AppDelegate.swift */,
 				49572F9D1985D09800679771 /* Main.storyboard */,
@@ -143,6 +156,10 @@
 		49572F971985D09800679771 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				496A4BEC19AC09E300289242 /* meter.png */,
+				496A4BED19AC09E300289242 /* meter@2x.png */,
+				49841BFC1990338C0028D046 /* Constants.swift */,
+				496A4BD319ABEB6B00289242 /* DockerClient */,
 				4994B40F1996E20B004991FB /* dashboardTableViewCell.png */,
 				4994B4101996E20B004991FB /* dashboardTableViewCell@2x.png */,
 				495D49FF199550210067CA3D /* SWRevealViewController */,
@@ -176,26 +193,16 @@
 		49572FB61985D09F00679771 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				49572FB71985D0DE00679771 /* ImagesTableViewController.swift */,
-				49A1CA21199184CC002A6B4C /* ConnectViewController.swift */,
-				49510C9919942EA00065F955 /* ContainersTableViewController.swift */,
-				495D4A03199552110067CA3D /* MenuViewController.swift */,
-				49377A2F1996BA43000F0BB2 /* RevealViewController.swift */,
-				4994B4051996D2A3004991FB /* ContainerDetailViewController.swift */,
-				4994B4071996D7D4004991FB /* DashboardTableViewController.swift */,
+				496A4BC519ABEB2B00289242 /* ConnectViewController.swift */,
+				496A4BC619ABEB2B00289242 /* ContainerDetailViewController.swift */,
+				496A4BC719ABEB2B00289242 /* ContainersTableViewController.swift */,
+				496A4BC819ABEB2B00289242 /* DashboardTableViewController.swift */,
+				496A4BC919ABEB2B00289242 /* ImagesTableViewController.swift */,
+				496A4BCA19ABEB2B00289242 /* MenuViewController.swift */,
+				496A4BCB19ABEB2B00289242 /* RevealViewController.swift */,
+				496A4BF219AC0EEE00289242 /* ImageDetailViewController.swift */,
 			);
 			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		49572FB91985D0EF00679771 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				49D83E59198F305600C95110 /* DockerClient.swift */,
-				49D83E5B198F307D00C95110 /* DockerImage.swift */,
-				49841BFC1990338C0028D046 /* Constants.swift */,
-				49FB883119A188D7009C8566 /* DockerContainer.swift */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		495D49FF199550210067CA3D /* SWRevealViewController */ = {
@@ -207,13 +214,27 @@
 			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		496A4BD319ABEB6B00289242 /* DockerClient */ = {
+			isa = PBXGroup;
+			children = (
+				496A4BD419ABEB7900289242 /* DockerClient.swift */,
+				496A4BD519ABEB7900289242 /* DockerContainer.swift */,
+				496A4BD619ABEB7900289242 /* DockerImage.swift */,
+			);
+			name = DockerClient;
+			sourceTree = "<group>";
+		};
 		49841BFE199043510028D046 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				49841BFF199043730028D046 /* ImagesTableViewCell.xib */,
-				49841C01199043E50028D046 /* ImagesTableViewCell.swift */,
-				4994B40B1996D987004991FB /* DashboardTableViewCell.swift */,
-				4994B40C1996D987004991FB /* DashboardTableViewCell.xib */,
+				496A4BDA19ABEBB800289242 /* DashboardTableViewCell.swift */,
+				496A4BDB19ABEBB800289242 /* DashboardTableViewCell.xib */,
+				496A4BDC19ABEBB800289242 /* ImagesTableViewCell.swift */,
+				496A4BDD19ABEBB800289242 /* ImagesTableViewCell.xib */,
+				496A4BE419AC04D400289242 /* ImageDetailsTableViewCell.swift */,
+				496A4BE519AC04D400289242 /* ImageDetailsTableViewCell.xib */,
+				496A4BF019AC0D0A00289242 /* ImageDetailsView.xib */,
+				496A4BF319AC0EEE00289242 /* ImageDetailViewController.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -339,15 +360,20 @@
 				49A1CA30199194F6002A6B4C /* connectTextField@2x.png in Resources */,
 				49A1CA2719918558002A6B4C /* connectBtn@2x.png in Resources */,
 				49A1CA341991A499002A6B4C /* slideMenuBarButtonItem.png in Resources */,
-				4994B40E1996D987004991FB /* DashboardTableViewCell.xib in Resources */,
+				496A4BE719AC04D400289242 /* ImageDetailsTableViewCell.xib in Resources */,
 				49A1CA2619918558002A6B4C /* connectBtn.png in Resources */,
+				496A4BEF19AC09E300289242 /* meter@2x.png in Resources */,
+				496A4BF519AC0EEE00289242 /* ImageDetailViewController.xib in Resources */,
+				496A4BEE19AC09E300289242 /* meter.png in Resources */,
+				496A4BF119AC0D0A00289242 /* ImageDetailsView.xib in Resources */,
 				49572FA11985D09800679771 /* Images.xcassets in Resources */,
 				49A1CA351991A499002A6B4C /* slideMenuBarButtonItem@2x.png in Resources */,
 				4994B4111996E20B004991FB /* dashboardTableViewCell.png in Resources */,
 				49A1CA2F199194F6002A6B4C /* connectTextField.png in Resources */,
 				49841C06199058B80028D046 /* imagesTableViewCellBg.png in Resources */,
+				496A4BDF19ABEBB800289242 /* DashboardTableViewCell.xib in Resources */,
+				496A4BE119ABEBB800289242 /* ImagesTableViewCell.xib in Resources */,
 				4994B4121996E20B004991FB /* dashboardTableViewCell@2x.png in Resources */,
-				49841C00199043730028D046 /* ImagesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,21 +424,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4994B4061996D2A3004991FB /* ContainerDetailViewController.swift in Sources */,
-				4994B4081996D7D4004991FB /* DashboardTableViewController.swift in Sources */,
-				49A1CA22199184CC002A6B4C /* ConnectViewController.swift in Sources */,
 				49841BFD1990338C0028D046 /* Constants.swift in Sources */,
-				49D83E5A198F305600C95110 /* DockerClient.swift in Sources */,
-				49572FB81985D0DE00679771 /* ImagesTableViewController.swift in Sources */,
-				4994B40D1996D987004991FB /* DashboardTableViewCell.swift in Sources */,
-				49841C02199043E50028D046 /* ImagesTableViewCell.swift in Sources */,
-				49FB883219A188D7009C8566 /* DockerContainer.swift in Sources */,
-				49377A301996BA44000F0BB2 /* RevealViewController.swift in Sources */,
+				496A4BCE19ABEB2B00289242 /* ContainersTableViewController.swift in Sources */,
+				496A4BD119ABEB2B00289242 /* MenuViewController.swift in Sources */,
+				496A4BCF19ABEB2B00289242 /* DashboardTableViewController.swift in Sources */,
+				496A4BCD19ABEB2B00289242 /* ContainerDetailViewController.swift in Sources */,
+				496A4BD219ABEB2B00289242 /* RevealViewController.swift in Sources */,
+				496A4BDE19ABEBB800289242 /* DashboardTableViewCell.swift in Sources */,
+				496A4BD819ABEB7900289242 /* DockerContainer.swift in Sources */,
+				496A4BD719ABEB7900289242 /* DockerClient.swift in Sources */,
+				496A4BE019ABEBB800289242 /* ImagesTableViewCell.swift in Sources */,
+				496A4BE619AC04D400289242 /* ImageDetailsTableViewCell.swift in Sources */,
+				496A4BD919ABEB7900289242 /* DockerImage.swift in Sources */,
 				49572F9A1985D09800679771 /* AppDelegate.swift in Sources */,
-				495D4A04199552110067CA3D /* MenuViewController.swift in Sources */,
+				496A4BCC19ABEB2B00289242 /* ConnectViewController.swift in Sources */,
+				496A4BF419AC0EEE00289242 /* ImageDetailViewController.swift in Sources */,
 				495D4A02199550210067CA3D /* SWRevealViewController.m in Sources */,
-				49D83E5C198F307D00C95110 /* DockerImage.swift in Sources */,
-				49510C9A19942EA00065F955 /* ContainersTableViewController.swift in Sources */,
+				496A4BD019ABEB2B00289242 /* ImagesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
