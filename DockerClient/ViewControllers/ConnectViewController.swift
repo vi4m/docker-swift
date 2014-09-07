@@ -26,7 +26,7 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
     
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let dvc = segue.destinationViewController as? RevealViewController {
@@ -34,15 +34,15 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         dockerHostTextField.resignFirstResponder()
         super.touchesBegan(touches, withEvent: event)
     }
     
     func updateUI() -> Void {
-        self.navigationController.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
-        self.navigationController.navigationBar.translucent = false
-        for view in self.navigationController.navigationBar.subviews {
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
+        self.navigationController!.navigationBar.translucent = false
+        for view in self.navigationController!.navigationBar.subviews {
             for view2 in view.subviews {
                 if let subView = view2 as? UIImageView {
                     if subView.frame.size.height < 2 {

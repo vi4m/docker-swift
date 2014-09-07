@@ -26,7 +26,7 @@ class DockerClient {
         components.port = port
         components.path = path
         components.query = query
-        return components.URL
+        return components.URL!
     }
     
     func getImages(baseUrl: String, port: Int = 80, all: Bool = false, completionBlock: (error: NSErrorPointer, responseArray: [DockerImage]) -> ()) {

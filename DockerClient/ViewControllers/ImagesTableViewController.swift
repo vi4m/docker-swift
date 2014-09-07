@@ -37,16 +37,16 @@ class ImagesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // return self.images.count
         return 1
     }
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: ImagesTableViewCell = tableView.dequeueReusableCellWithIdentifier("imageCellIdentifier", forIndexPath: indexPath) as ImagesTableViewCell
         
         // var repoTags = self.images[indexPath.row].repoTags
@@ -55,16 +55,16 @@ class ImagesTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         tableView.separatorColor = UIColor.whiteColor()
         return 170
     }
 
     func updateUI() -> Void {
-        self.navigationController.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
-        self.navigationController.navigationBar.translucent = false
-        for view in self.navigationController.navigationBar.subviews {
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
+        self.navigationController!.navigationBar.translucent = false
+        for view in self.navigationController!.navigationBar.subviews {
             for view2 in view.subviews {
                 if let subView = view2 as? UIImageView {
                     if subView.frame.size.height < 2 {
@@ -80,7 +80,7 @@ class ImagesTableViewController: UITableViewController {
             rvc.toggleAnimationType = SWRevealToggleAnimationType.EaseOut
             self.slideMenuBarButtonItem.target = self.revealViewController()
             self.slideMenuBarButtonItem.action = "revealToggle:"
-            self.navigationController.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.navigationController!.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
         self.tableView.backgroundColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
@@ -89,7 +89,7 @@ class ImagesTableViewController: UITableViewController {
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
     
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("imageDetailSegue", sender: indexPath)
     }
 
@@ -128,7 +128,7 @@ class ImagesTableViewController: UITableViewController {
     }
     */
 
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if let dvc = segue.destinationViewController as? ImageDetailViewController {
             if let indexPath = sender as? NSIndexPath {
                 // dvc.image = self.images[indexPath.row]

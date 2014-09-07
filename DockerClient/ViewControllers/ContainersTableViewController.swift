@@ -23,9 +23,9 @@ class ContainersTableViewController: UITableViewController {
     }
     
     func updateUI() -> Void {
-        self.navigationController.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
-        self.navigationController.navigationBar.translucent = false
-        for view in self.navigationController.navigationBar.subviews {
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
+        self.navigationController!.navigationBar.translucent = false
+        for view in self.navigationController!.navigationBar.subviews {
             for view2 in view.subviews {
                 if let subView = view2 as? UIImageView {
                     if subView.frame.size.height < 2 {
@@ -40,7 +40,7 @@ class ContainersTableViewController: UITableViewController {
             rvc.toggleAnimationType = SWRevealToggleAnimationType.EaseOut
             self.slideMenuBarButtonItem.target = self.revealViewController()
             self.slideMenuBarButtonItem.action = "revealToggle:"
-            self.navigationController.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.navigationController!.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
 
         self.tableView.backgroundColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
@@ -56,13 +56,13 @@ class ContainersTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 0
     }
 
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 0

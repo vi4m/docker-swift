@@ -23,9 +23,9 @@ class DashboardTableViewController: UITableViewController {
     }
     
     func updateUI() -> Void {
-        self.navigationController.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
-        self.navigationController.navigationBar.translucent = false
-        for view in self.navigationController.navigationBar.subviews {
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
+        self.navigationController!.navigationBar.translucent = false
+        for view in self.navigationController!.navigationBar.subviews {
             for view2 in view.subviews {
                 if let subView = view2 as? UIImageView {
                     if subView.frame.size.height < 2 {
@@ -40,7 +40,7 @@ class DashboardTableViewController: UITableViewController {
             rvc.toggleAnimationType = SWRevealToggleAnimationType.EaseOut
             self.slideMenuBarButtonItem.target = self.revealViewController()
             self.slideMenuBarButtonItem.action = "revealToggle:"
-            self.navigationController.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.navigationController!.navigationBar.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
         self.tableView.backgroundColor = UIColor(red: 0.165, green: 0.169, blue: 0.231, alpha: 1)
@@ -57,26 +57,26 @@ class DashboardTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
 
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 4
     }
 
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        var cell: DashboardTableViewCell = tableView.dequeueReusableCellWithIdentifier("dashboardCellIdentifier", forIndexPath: indexPath) as DashboardTableViewCell!
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell: DashboardTableViewCell = tableView.dequeueReusableCellWithIdentifier("dashboardCellIdentifier", forIndexPath: indexPath) as DashboardTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
     }
     
-    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 160
     }
 
